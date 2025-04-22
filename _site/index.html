@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<p>&lt;!DOCTYPE html&gt;</p>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TRNUC Archive</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/trnuc-archive/style.css" />
 </head>
 <body>
   <!-- Mobile Header -->
 <div class="mobile-header">
-    <a href="/">
+    <a href="/trnuc-archive/">
       <img src="https://janewolfe.github.io/trnuc-archive/logo.png" alt="Logo" />
     </a>
     <div class="hamburger-icon" onclick="toggleMobileNav()">
@@ -21,7 +21,7 @@
 
 <p><!-- Sidebar --></p>
 <div class="sidebar">
-    <a href="/">
+    <a href="/trnuc-archive/">
       <img src="https://janewolfe.github.io/trnuc-archive/logo.png" alt="TRNUC Logo" />
     </a>
     <h3>THE TRNUC ARCHIVE</h3>
@@ -69,7 +69,7 @@
     function toggleMobileNav() {
       const nav = document.getElementById('mobileNav');
       const isVisible = nav.classList.contains('show');
-    
+
       if (isVisible) {
         nav.classList.remove('show');
         nav.addEventListener('transitionend', () => {
@@ -84,7 +84,7 @@
         document.body.style.overflow = 'hidden';
       }
     }
-    </script>
+</script>
 
 <!-- Main Content -->
 <div class="main">
@@ -109,42 +109,37 @@
       
         <tr>
           <td>1</td>
-          <td><a href="/people/alice-smith/">alice-smith.md</a></td>
-          <td><a href="/people/alice-smith/">https://www.youtube.com/embed/dy2f-OXOMew?si=1p0BxxJc8uVqbAc6</a></td>
-          <td><a href="/pdfs/alice-smith.pdf" target="_blank">PDF</a></td>
-          <td><a href="/people/alice-smith/">Read their blog</a></td>
-
+          <td><a href="/trnuc-archive/people/alice-smith/">Alice Smith</a></td>
+          <td><a href="/trnuc-archive/people/alice-smith/">https://www.youtube.com/embed/dy2f-OXOMew?si=1p0BxxJc8uVqbAc6</a></td>
+          <td><a href="/trnuc-archive/pdfs/alice-smith.pdf" target="_blank">PDF</a></td>
+          <td><a href="/trnuc-archive/people/alice-smith/">Read their blog</a></td>
         </tr>
       
         <tr>
           <td>2</td>
-          <td><a href="/people/bob-johnson/">Bob Johnson</a></td>
-          <td><a href="/people/bob-johnson/">https://www.youtube.com/embed/AWW-vIeL32o?si=DLkUQZC5XF5Mn7lp</a></td>
-          <td><a href="/pdfs/bob-johnson.pdf" target="_blank">PDF</a></td>
-          <td><a href="/people/bob-johnson/">Read their blog</a></td>
-
+          <td><a href="/trnuc-archive/people/bob-johnson/">Bob Johnson</a></td>
+          <td><a href="/trnuc-archive/people/bob-johnson/">https://www.youtube.com/embed/AWW-vIeL32o?si=DLkUQZC5XF5Mn7lp</a></td>
+          <td><a href="/trnuc-archive/pdfs/bob-johnson.pdf" target="_blank">PDF</a></td>
+          <td><a href="/trnuc-archive/people/bob-johnson/">Read their blog</a></td>
         </tr>
       
         <tr>
           <td>3</td>
-          <td><a href="/people/clara-williams/">Clara Williams</a></td>
-          <td><a href="/people/clara-williams/">https://www.youtube.com/embed/5t0qp3-kkTs?si=KG8Oh9t1fHorHxIN</a></td>
-          <td><a href="/pdfs/clara-williams.pdf" target="_blank">PDF</a></td>
-          <td><a href="/people/clara-williams/">Read their blog</a></td>
-
+          <td><a href="/trnuc-archive/people/clara-williams/">Clara Williams</a></td>
+          <td><a href="/trnuc-archive/people/clara-williams/">https://www.youtube.com/embed/5t0qp3-kkTs?si=KG8Oh9t1fHorHxIN</a></td>
+          <td><a href="/trnuc-archive/pdfs/clara-williams.pdf" target="_blank">PDF</a></td>
+          <td><a href="/trnuc-archive/people/clara-williams/">Read their blog</a></td>
         </tr>
       
         <tr>
           <td>4</td>
-          <td><a href="/people/david-brown/">David Brown</a></td>
-          <td><a href="/people/david-brown/">https://www.youtube.com/embed/rBENQjpBZvs?si=W6SjHv-7ZpUrm0Rd</a></td>
-          <td><a href="/pdfs/david-brown.pdf" target="_blank">PDF</a></td>
-          <td><a href="/people/david-brown/">Read their blog</a></td>
-
+          <td><a href="/trnuc-archive/people/david-brown/">David Brown</a></td>
+          <td><a href="/trnuc-archive/people/david-brown/">https://www.youtube.com/embed/rBENQjpBZvs?si=W6SjHv-7ZpUrm0Rd</a></td>
+          <td><a href="/trnuc-archive/pdfs/david-brown.pdf" target="_blank">PDF</a></td>
+          <td><a href="/trnuc-archive/people/david-brown/">Read their blog</a></td>
         </tr>
       
     </tbody>
-
   </table>
 </div>
 
@@ -164,27 +159,6 @@ function searchTable() {
     row.style.display = text.includes(input) ? '' : 'none';
   });
 }
-
-function toggleMobileNav() {
-  const nav = document.getElementById('mobileNav');
-  const isVisible = nav.classList.contains('show');
-
-  if (isVisible) {
-    nav.classList.remove('show');
-    nav.addEventListener('transitionend', () => {
-      nav.style.display = 'none';
-    }, { once: true });
-    document.body.style.overflow = 'auto';
-  } else {
-    nav.style.display = 'block';
-    requestAnimationFrame(() => {
-      nav.classList.add('show');
-    });
-    document.body.style.overflow = 'hidden';
-  }
-}
 </script>
-
-
 </body>
 </html>

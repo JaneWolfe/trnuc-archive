@@ -17,7 +17,7 @@
   
       <div class="profile-overview">
         <div class="profile-image">
-          <img src="{{ page.photo-link | default: '/images/default-profile-photo.jpg' }}" alt="{{ page.title }}" class="circular">
+          <img src="{{ page.photo-link | default: '/images/default-profile-photo.jpg' | relative_url }}" alt="{{ page.title }}" class="circular">
         </div>
         <div class="profile-info">
           <h2>Bio</h2>
@@ -42,7 +42,7 @@
     </div>
   
     <div class="footer">
-      <p>Back to <a href="/index.html">TRNUC Archive</a></p>
+        <p>Back to <a href="{{ '/index.html' | relative_url }}">TRNUC Archive</a></p>
     </div>
   </body>
 </html>
