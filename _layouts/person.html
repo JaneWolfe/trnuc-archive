@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+
+    {% include sidebar.html %}
+  
+    <div class="main">
+      <div class="heading-section">
+        <h1>{{ page.title }}</h1>
+        <p><em>Case #{{ page.casenumber }}</em></p>
+      </div>
+  
+      <div class="profile-overview">
+        <div class="profile-image">
+          <img src="{{ page.photo-link | default: '/images/default-profile-photo.jpg' }}" alt="{{ page.title }}" class="circular">
+        </div>
+        <div class="profile-info">
+          <h2>Bio</h2>
+          <p>{{ page.bio }}</p>
+  
+          <h2>PDF</h2>
+          <p><a href="{{ page.pdf }}" target="_blank">Download testimony</a></p>
+  
+          <h2>Personal Statement</h2>
+          <p>{{ page.blog }}</p>
+        </div>
+      </div>
+  
+      {% if page.youtube %}
+      <div class="video-section">
+        <h2>Watch the Hearing</h2>
+        <div class="video-wrapper">
+          <iframe width="100%" height="450" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  
+    <div class="footer">
+      <p>Back to <a href="/index.html">TRNUC Archive</a></p>
+    </div>
+  </body>
+</html>

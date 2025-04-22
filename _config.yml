@@ -1,0 +1,5 @@
+title: TRNUC Archive
+theme: minima
+collections:
+  people:
+    output: true

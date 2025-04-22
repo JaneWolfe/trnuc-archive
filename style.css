@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  .sidebar img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .sidebar h3 {
+    margin-top: 0;
+    color: #ffffff;
+  }
+  .sidebar nav {
+    margin-top: 20px;
+  }
+  .sidebar nav a {
+    display: block;
+    text-decoration: none;
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin: 3px 0;
+  }
+  .sidebar nav a.volume {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+  }
+  .sidebar nav a.section {
+    background-color: #ccc;
+    color: #000;
+  }
+  .sidebar nav a:hover {
+    background-color: #444;
+    color: #fff;
+  }
+  .main {
+    margin-left: 270px;
+    padding: 0;
+  }
+  .heading-section {
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  .heading-section h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .heading-section h2 {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  #searchBar {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 20px 0;
+    text-align: center;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 60px;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #000;
+    color: #fff;
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 270px;
+    right: 0;
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  .mobile-header {
+    display: none;
+    background-color: #000;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  .mobile-header img {
+    height: 40px;
+  }
+  .hamburger-icon {
+width: 30px;
+height: 20px;
+position: relative;
+cursor: pointer;
+}
+  .hamburger-icon span {
+    background: white;
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+  }
+  .hamburger-icon span:nth-child(1) {
+    top: 0;
+  }
+  .hamburger-icon span:nth-child(2) {
+    top: 8px;
+  }
+  .hamburger-icon span:nth-child(3) {
+    top: 16px;
+  }
+  
+  
+  
+  .mobile-nav .close.hovered {
+transform: rotate(90deg);
+}
+  .mobile-nav {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 999;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    color: white;
+  }
+  .mobile-nav.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .mobile-nav a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 10px 0;
+    text-decoration: none;
+  }
+  .mobile-nav .close {
+position: absolute;
+top: 20px;
+right: 20px;
+font-size: 36px;
+cursor: pointer;
+color: white;
+transform: rotate(0deg);
+transition: transform 0.4s ease;
+}
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+    .mobile-header {
+      display: flex;
+    }
+    .main {
+      margin-left: 0;
+      padding: 0 10px;
+    }
+    .footer {
+      left: 0;
+    }
+    table, th, td {
+      font-size: 12px;
+    }
+    #searchBar {
+      font-size: 14px;
+    }
+  }
+
+  /* Profile template */
+  .profile-overview {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+
+  .profile-image img.circular {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ccc;
+  }
+
+  .profile-info {
+    flex: 1;
+    min-width: 240px;
+  }
+
+  .video-section {
+    margin-top: 2rem;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }

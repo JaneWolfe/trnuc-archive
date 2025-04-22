@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRNUC Archive</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Mobile Header -->
+<div class="mobile-header">
+    <a href="/">
+      <img src="https://janewolfe.github.io/trnuc-archive/logo.png" alt="Logo" />
+    </a>
+    <div class="hamburger-icon" onclick="toggleMobileNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+<p><!-- Sidebar --></p>
+<div class="sidebar">
+    <a href="/">
+      <img src="https://janewolfe.github.io/trnuc-archive/logo.png" alt="TRNUC Logo" />
+    </a>
+    <h3>THE TRNUC ARCHIVE</h3>
+    <nav>
+      <a href="#" class="volume">Volume I</a>
+      <a href="#" class="section">Introduction</a>
+      <a href="#" class="section">Annex I</a>
+      <a href="#" class="section">Annex II</a>
+      <a href="#" class="section">Annex III</a>
+      <a href="#" class="section">Annex IV</a>
+      <a href="#" class="volume">Volume II</a>
+      <a href="#" class="section">Historical Context</a>
+      <a href="#" class="volume">Volume III</a>
+      <a href="#" class="section">Legal Framework</a>
+      <a href="#" class="volume">Volume IV</a>
+      <a href="#" class="section">Amnesty</a>
+      <a href="#" class="volume">Volume V</a>
+      <a href="#" class="section">Reparations</a>
+    </nav>
+  </div>
+
+<p><!-- Mobile Nav Menu --></p>
+<div id="mobileNav" class="mobile-nav">
+    <div class="close" onclick="this.classList.remove('hovered'); toggleMobileNav()" onmouseenter="this.classList.add('hovered')" onmouseleave="this.classList.remove('hovered')">&times;</div>
+    <h3>THE TRNUC ARCHIVE</h3>
+    <nav>
+      <a href="#" class="volume">Volume I</a>
+      <a href="#" class="section">Introduction</a>
+      <a href="#" class="section">Annex I</a>
+      <a href="#" class="section">Annex II</a>
+      <a href="#" class="section">Annex III</a>
+      <a href="#" class="section">Annex IV</a>
+      <a href="#" class="volume">Volume II</a>
+      <a href="#" class="section">Historical Context</a>
+      <a href="#" class="volume">Volume III</a>
+      <a href="#" class="section">Legal Framework</a>
+      <a href="#" class="volume">Volume IV</a>
+      <a href="#" class="section">Amnesty</a>
+      <a href="#" class="volume">Volume V</a>
+      <a href="#" class="section">Reparations</a>
+    </nav>
+  </div>
+
+<script>
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobileNav');
+      const isVisible = nav.classList.contains('show');
+    
+      if (isVisible) {
+        nav.classList.remove('show');
+        nav.addEventListener('transitionend', () => {
+          nav.style.display = 'none';
+        }, { once: true });
+        document.body.style.overflow = 'auto';
+      } else {
+        nav.style.display = 'block';
+        requestAnimationFrame(() => {
+          nav.classList.add('show');
+        });
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    </script>
+
+<!-- Main Content -->
+<div class="main">
+  <div class="heading-section">
+    <h2>TRUTH, RECONCILIATION AND NATIONAL UNITY COMMISSION</h2>
+    <h1>FINAL REPORT</h1>
+  </div>
+
+  <input type="text" id="searchBar" onkeyup="searchTable()" placeholder="Search by name..." />
+
+  <table id="casesTable">
+    <thead>
+      <tr>
+        <th>Case No.</th>
+        <th>Name</th>
+        <th>Hearing</th>
+        <th>Report</th>
+        <th>Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>1</td>
+          <td><a href="/people/alice-smith/">alice-smith.md</a></td>
+          <td><a href="/people/alice-smith/">https://www.youtube.com/embed/dy2f-OXOMew?si=1p0BxxJc8uVqbAc6</a></td>
+          <td><a href="/pdfs/alice-smith.pdf" target="_blank">PDF</a></td>
+          <td><a href="/people/alice-smith/">Read their blog</a></td>
+
+        </tr>
+      
+        <tr>
+          <td>2</td>
+          <td><a href="/people/bob-johnson/">Bob Johnson</a></td>
+          <td><a href="/people/bob-johnson/">https://www.youtube.com/embed/AWW-vIeL32o?si=DLkUQZC5XF5Mn7lp</a></td>
+          <td><a href="/pdfs/bob-johnson.pdf" target="_blank">PDF</a></td>
+          <td><a href="/people/bob-johnson/">Read their blog</a></td>
+
+        </tr>
+      
+        <tr>
+          <td>3</td>
+          <td><a href="/people/clara-williams/">Clara Williams</a></td>
+          <td><a href="/people/clara-williams/">https://www.youtube.com/embed/5t0qp3-kkTs?si=KG8Oh9t1fHorHxIN</a></td>
+          <td><a href="/pdfs/clara-williams.pdf" target="_blank">PDF</a></td>
+          <td><a href="/people/clara-williams/">Read their blog</a></td>
+
+        </tr>
+      
+        <tr>
+          <td>4</td>
+          <td><a href="/people/david-brown/">David Brown</a></td>
+          <td><a href="/people/david-brown/">https://www.youtube.com/embed/rBENQjpBZvs?si=W6SjHv-7ZpUrm0Rd</a></td>
+          <td><a href="/pdfs/david-brown.pdf" target="_blank">PDF</a></td>
+          <td><a href="/people/david-brown/">Read their blog</a></td>
+
+        </tr>
+      
+    </tbody>
+
+  </table>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  Connect with us on our: <strong>Facebook Group</strong> | <strong>Whatsapp Community</strong> | <strong>Youtube Channel</strong>
+</div>
+
+<!-- Optional: JavaScript for search -->
+<script>
+function searchTable() {
+  const input = document.getElementById('searchBar').value.toLowerCase();
+  const rows = document.querySelectorAll('#casesTable tbody tr');
+
+  rows.forEach(row => {
+    const text = row.innerText.toLowerCase();
+    row.style.display = text.includes(input) ? '' : 'none';
+  });
+}
+
+function toggleMobileNav() {
+  const nav = document.getElementById('mobileNav');
+  const isVisible = nav.classList.contains('show');
+
+  if (isVisible) {
+    nav.classList.remove('show');
+    nav.addEventListener('transitionend', () => {
+      nav.style.display = 'none';
+    }, { once: true });
+    document.body.style.overflow = 'auto';
+  } else {
+    nav.style.display = 'block';
+    requestAnimationFrame(() => {
+      nav.classList.add('show');
+    });
+    document.body.style.overflow = 'hidden';
+  }
+}
+</script>
+
+
+</body>
+</html>
