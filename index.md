@@ -12,6 +12,9 @@ permalink: /index.html
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
 <body>
+
+{% include loading.html %}
+
   <!-- Mobile Header -->
 <div class="mobile-header">
     <a href="{{ '/' | relative_url }}">
@@ -141,5 +144,6 @@ function searchTable() {
   });
 }
 </script>
+
 </body>
 </html>

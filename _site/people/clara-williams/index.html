@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Clara Williams</title>
   <link rel="stylesheet" href="/trnuc-archive/style.css">
+  <link rel="preload" as="image" href="/trnuc-archive/images/clara-williams.jpg">
 </head>
 <body>
 
@@ -21,7 +22,7 @@
   
   <!-- Sidebar -->
   <div class="sidebar">
-    <a href="/">
+    <a href="/trnuc-archive/">
       <img src="https://janewolfe.github.io/trnuc-archive/logo.png" alt="TRNUC Logo">
     </a>
     <h3>THE TRNUC ARCHIVE</h3>
@@ -87,13 +88,33 @@
       }
     }
     </script>
+    <!-- Loader Markup -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+  </div>
+  
+  <!-- Loader CSS should still live in style.css -->
+  
+  <!-- Loader JS to fade out when the page loads -->
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("loader-wrapper");
+      if (loader) {
+        loader.style.opacity = "0";
+        setTimeout(() => {
+          loader.style.display = "none";
+        }, 500); // match your CSS transition time
+      }
+    });
+  </script>
+  
   
     <div class="main">
       <div class="heading-section">
         <h1>Clara Williams</h1>
         <p><em>Case #3</em></p>
       </div>
-  
+
       <div class="profile-overview">
         <div class="profile-image">
           <img src="/trnuc-archive/images/clara-williams.jpg" alt="Clara Williams" class="circular">
@@ -101,15 +122,15 @@
         <div class="profile-info">
           <h2>Bio</h2>
           <p>Detained without trial for 6 months.</p>
-  
+
           <h2>PDF</h2>
-          <p><a href="/pdfs/clara-williams.pdf" target="_blank">Download testimony</a></p>
-  
+          <p><a href="/trnuc-archive/pdfs/clara-williams.pdf" target="_blank">Download testimony</a></p>
+
           <h2>Personal Statement</h2>
           <p>Clara discusses healing and community.</p>
         </div>
       </div>
-  
+
       
       <div class="video-section">
         <h2>Watch the Hearing</h2>
@@ -119,9 +140,11 @@
       </div>
       
     </div>
-  
+
     <div class="footer">
         <p>Back to <a href="/trnuc-archive/index.html">TRNUC Archive</a></p>
     </div>
-  </body>
+      
+      
+</body>
 </html>

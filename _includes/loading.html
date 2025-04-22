@@ -1,0 +1,20 @@
+<!-- Loader Markup -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+  </div>
+  
+  <!-- Loader CSS should still live in style.css -->
+  
+  <!-- Loader JS to fade out when the page loads -->
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("loader-wrapper");
+      if (loader) {
+        loader.style.opacity = "0";
+        setTimeout(() => {
+          loader.style.display = "none";
+        }, 500); // match your CSS transition time
+      }
+    });
+  </script>
+  
