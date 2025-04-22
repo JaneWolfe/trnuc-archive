@@ -96,6 +96,21 @@ body {
     padding: 10px;
     text-align: center;
   }
+  .footer-person {
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+    margin-left: 270px; /* Aligns with .main on desktop */
+    margin-top: 2rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer-person {
+      margin-left: 0;     /* Full width on mobile */
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
   .mobile-header {
     display: none;
     background-color: #000;
@@ -204,6 +219,32 @@ transition: transform 0.4s ease;
     align-items: flex-start;
     margin: 2rem 0;
     flex-wrap: wrap;
+  }
+
+  .profile-overview.compact {
+    display: flex;
+    align-items: center; /* Vertically center text block */
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+  }
+  
+  .profile-overview.compact .profile-image img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ccc;
+  }
+  
+  .profile-overview.compact .profile-info {
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  
+  .profile-overview.compact .profile-info p {
+    margin: 0.5rem 0;
   }
 
   .profile-image img.circular {

@@ -17,21 +17,17 @@
         <p><em>Case #{{ page.casenumber }}</em></p>
       </div>
 
-      <div class="profile-overview">
+      <div class="profile-overview compact">
         <div class="profile-image">
           <img src="{{ page.photo-link | default: '/images/default-profile-photo.jpg' | relative_url }}" alt="{{ page.title }}" class="circular">
         </div>
         <div class="profile-info">
-          <h2>Bio</h2>
-          <p>{{ page.bio }}</p>
-
-          <h2>PDF</h2>
-          <p><a href="{{ page.pdf | relative_url }}" target="_blank">Download testimony</a></p>
-
-          <h2>Personal Statement</h2>
-          <p>{{ page.blog }}</p>
+          <p class="bio"><strong>Bio:</strong> {{ page.bio }}</p>
+          <p class="pdf"><strong>PDF:</strong> <a href="{{ page.pdf }}" target="_blank">Download testimony</a></p>
+          <p class="statement"><strong>Personal Statement:</strong> {{ page.blog }}</p>
         </div>
       </div>
+      
 
       {% if page.youtube %}
       <div class="video-section">
@@ -43,7 +39,7 @@
       {% endif %}
     </div>
 
-    <div class="footer">
+    <div class="footer-person">
         <p>Back to <a href="{{ '/index.html' | relative_url }}">TRNUC Archive</a></p>
     </div>
       
